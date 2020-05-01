@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+mat-select {
+  .mat-select-value-text {
+    line-height: 16px;
+    color: #101010;
+  }
+}
+.lbl-lov-box {
+  display: inline-block;
+  vertical-align: bottom;
+  label.ctrl-title {
+    display: block;
+    line-height: normal;
+    margin-bottom: 2px;
+    font-size: 11px;
+    color: #000;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+  &.tradeFilter-lov {
+    margin-right: 15px;
+    .grid-head-lov {
+      width: 210px;
+    }
+  }
+}
+.mat-datepicker-toggle {
+  color: green;
+}
+.mat-form-field {
+  input.mat-input-element {
+    line-height: 16px;
+    color: #101010;
+    &[disabled] {
+      opacity: 0.65;
+    }
+  }
+  width: 100%;
+}
+.grid-head-lov {
+  background: #f6f6f6;
+  border: 1px solid #a19d9d;
+  height: 36px;
+  line-height: 36px;
+  width: 300px;
+  padding-left: 10px;
+}
+button {
+  border-radius: 0px !important;
+  outline: none !important;
+}
+.red-button {
+  background: #e74c3c;
+  color: #fff;
+}
+.blue-button {
+  background: blue;
+  color: #fff;
+}
+.site-nav {
+  padding: 5px 16px;
+  font-size: 14px;
+  background: #f2f2f2;
+  border-bottom: 1px solid #e2e2e2;
+  a {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding-right: 28px;
+    font-weight: 500;
+    &:last-child {
+      &:after {
+        content: none;
+      }
+      cursor: context-menu;
+    }
+  }
+}
+

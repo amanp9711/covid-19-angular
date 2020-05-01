@@ -1,0 +1,33 @@
+<div class="age-page">
+    <div class="site-nav">
+        <a routerLink="/home">Home</a>
+        <a href="javascript:void(0);">DateWise Data</a>
+    </div>
+    <div>
+        <label for="" class="ctrl-title">Select Date </label>
+        <!-- <mat-form-field> -->
+            <input matInput class="mat-date" name="selectedDate" [matDatepicker]="picker" (click)="picker.open()"
+                placeholder="Select Date" [(ngModel)]="selectedDate" (dateChange)="getData(selectedDate,selectedState)"
+                readonly>
+            <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        <!-- </mat-form-field> -->
+    </div>
+    <label for="" class="ctrl-title">Select State </label>
+    <div class="grid-head-lov lbl-lov-box">
+            <mat-select name="selectedState" [(ngModel)]="selectedState" placeholder="Select State"
+                (selectionChange)="getData(selectedDate,selectedState)">
+                <mat-option [value]="s.state_id" *ngFor="let s of statesOptions">
+                    {{ s.state_name }}
+                </mat-option>
+            </mat-select>
+    </div>
+
+    <div>
+        <div style="display: block">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                [legend]="barChartLegend" [chartType]="barChartType">
+            </canvas>
+        </div>
+    </div>
+</div>
